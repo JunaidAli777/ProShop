@@ -7,6 +7,7 @@ import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
 import logo from '../assets/logo.png';
+import { resetCart } from '../slices/cartSlice';
 
 import React from 'react'
 
@@ -24,6 +25,7 @@ const Header = () => {
     try {
         await logoutApiCall().unwrap();
         dispatch(logout()); //this is the front part i.e. just clearing the local storage
+        dispatch(resetCart());
         navigate('/login');
     } catch(err) {
         console.log(err)
