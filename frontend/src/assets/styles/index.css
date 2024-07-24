@@ -43,6 +43,49 @@ table th {
   margin-top: 10px;
 }
 
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto; 
+  width: 80%; 
+  height: 400px;
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+/* Media query for screens larger than 1200px */
+@media (min-width: 1200px) {
+  .carousel-container {
+    width: 48.5%;
+    height: 500px;
+    max-width: 1200px;
+    max-height: 600px;
+  }
+}
+
+
+/* Media query for screens between 768px and 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .carousel-container {
+    width: 60%;
+    height: 360px;
+    max-width: 1000px;
+    max-height: 500px;
+  }
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .carousel-container {
+    width: 90%;
+    height: 300px;
+    max-width: 600px;
+    max-height: 400px;
+  }
+}
+
 .carousel-caption {
   position: absolute;
   width: 100%;
